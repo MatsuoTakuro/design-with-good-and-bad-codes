@@ -18,8 +18,12 @@ public class Money {
         this.currency = currency;
     }
 
-    Money add(final int other) {
-        final int added = amount + other;
+    Money add(final Money other) {
+        if (!currency.equals(other.currency)) {
+            throw new IllegalArgumentException("Currency units are different.");
+        }
+
+        final int added = amount + other.amount;
         return new Money(added, currency);
     }
 
