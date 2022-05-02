@@ -22,5 +22,6 @@ public class Main {
         AmountExcludingTax exAmount = new AmountExcludingTax(500);
         AmountIncludingTax inAmount = new AmountIncludingTax(exAmount, taxRate());
         System.out.println(inAmount.value);
+        Common.report("message tested");
     }
 }
