@@ -1,4 +1,4 @@
-package Ch5;
+package Ch5.Point;
 
 public class ConsumptionPoint {
     // Duplicated MIN_POINT...Should I make the superclass POINT?
