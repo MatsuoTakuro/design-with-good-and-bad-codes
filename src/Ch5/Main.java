@@ -1,5 +1,8 @@
 package Ch5;
 
+import Ch5.Discount.DiscountRate;
+import Ch5.Discount.DiscountedPrice;
+import Ch5.Discount.RegularPrice;
 import Ch5.Game.Location;
 import Ch5.Point.GiftPoint;
 import Ch5.TaxCalculator.AmountExcludingTax;
@@ -12,6 +15,7 @@ public class Main {
         point();
         taxCalculator();
         game();
+        discount();
     }
 
     static void point() {
@@ -33,5 +37,12 @@ public class Main {
         Location shiftedLocation = location.shift(3, 4);
         System.out.println(shiftedLocation.x);
         System.out.println(shiftedLocation.y);
+    }
+
+    static void discount() {
+        RegularPrice regPrice = new RegularPrice(1000);
+        DiscountRate disRate = DiscountRate.newRegularDiscountRate();
+        DiscountedPrice disPrice = DiscountedPrice.newDiscountedPrice(regPrice, disRate);
+        System.out.println(disPrice.amount);
     }
 }
