@@ -4,6 +4,7 @@ import Ch5.Discount.DiscountRate;
 import Ch5.Discount.DiscountedPrice;
 import Ch5.Discount.RegularPrice;
 import Ch5.Game.Location;
+import Ch5.Magic.MagicPoint;
 import Ch5.Point.GiftPoint;
 import Ch5.TaxCalculator.AmountExcludingTax;
 import Ch5.TaxCalculator.AmountIncludingTax;
@@ -16,6 +17,7 @@ public class Main {
         taxCalculator();
         game();
         discount();
+        magic();
     }
 
     static void point() {
@@ -44,5 +46,14 @@ public class Main {
         DiscountRate disRate = DiscountRate.newRegularDiscountRate();
         DiscountedPrice disPrice = DiscountedPrice.newDiscountedPrice(regPrice, disRate);
         System.out.println(disPrice.amount);
+    }
+
+    static void magic() {
+        MagicPoint magPoint = MagicPoint.newMagicPoint();
+        System.out.println(magPoint.currentAmount);
+        magPoint.recover(120);
+        System.out.println(magPoint.currentAmount);
+        magPoint.consume(50);
+        System.out.println(magPoint.currentAmount);
     }
 }
