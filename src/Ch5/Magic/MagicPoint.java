@@ -9,6 +9,8 @@ public class MagicPoint {
     public int currentAmount;
     private final List<Integer> maxIncrements;
 
+//  Originally, it is better not to use the following primitive integer types of this class.
+//  The appropriate classes should be defined and used instead.
     private MagicPoint(final int originalMaxAmount, final List<Integer> maxIncrements) {
         this.originalMaxAmount = originalMaxAmount;
         this.maxIncrements = maxIncrements;
@@ -18,7 +20,7 @@ public class MagicPoint {
         return new MagicPoint(REG_ORIGINAL_MAX_AMOUNT, new ArrayList<Integer>());
     }
 
-    int max() {
+    private int max() {
         int amount = originalMaxAmount;
         for (int each: maxIncrements) {
             amount += each;
