@@ -9,15 +9,15 @@ public class MagicOperator {
 
     private MagicOperator(Member member) {
         this.member = member;
-//        TODO: Are there other ways to initialize the Map?
-        prepareMagic();
+//        TODO: Are there other better ways to initialize the Map?
+        prepareMagics();
     }
 
     public static MagicOperator newMagicOperator(Member member) {
         return new MagicOperator(member);
     }
 
-    void prepareMagic() {
+    void prepareMagics() {
         final Fire fire = new Fire(member);
         final Shiden shiden = new Shiden(member);
         final HellFire hellFire = new HellFire(member);
