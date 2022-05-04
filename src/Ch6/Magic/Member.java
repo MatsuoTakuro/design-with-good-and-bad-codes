@@ -14,7 +14,7 @@ public class Member {
 
 
     private Member(int level, int agility, int magicAttack, int vitality, MagicPoint magicPoint, TechnicalPoint technicalPoint, HitPoint hitPoint) {
-//        Too many instance vars...
+//      TODO: Too many instance variables...
         this.level = level;
         this.agility = agility;
         this.magicAttack = magicAttack;

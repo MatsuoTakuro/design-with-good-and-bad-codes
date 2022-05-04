@@ -9,6 +9,7 @@ public class MagicOperator {
 
     private MagicOperator(Member member) {
         this.member = member;
+//        TODO: Are there other ways to initialize the Map?
         prepareMagic();
     }
 
