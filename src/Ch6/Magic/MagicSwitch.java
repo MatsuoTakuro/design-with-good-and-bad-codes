@@ -41,20 +41,20 @@ public class MagicSwitch {
     }
 
     void consumeMagicPoint(final Magic magic) {
-        final int costMagicPoint = magic.costMagicPoint();
-        System.out.println("costMagicPoint: " + costMagicPoint);
+        final MagicPoint costMagicPoint = magic.costMagicPoint();
+        System.out.println("costMagicPoint: " + costMagicPoint.value);
 
     }
 
     void consumeTechnicalPoint(final Magic magic) {
-        final int costTechnicalPoint = magic.costTechnicalPoint();
-        System.out.println("costTechnicalPoint: " + costTechnicalPoint);
+        final TechnicalPoint costTechnicalPoint = magic.costTechnicalPoint();
+        System.out.println("costTechnicalPoint: " + costTechnicalPoint.value);
 
     }
 
     void magicDamage(final Magic magic) {
-        final int attackPower = magic.attackPower();
-        System.out.println("attackPower: " + attackPower);
+        final AttackPower attackPower = magic.attackPower();
+        System.out.println("attackPower: " + attackPower.value);
     }
 
 

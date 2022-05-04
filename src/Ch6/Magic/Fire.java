@@ -11,15 +11,18 @@ public class Fire implements Magic {
         return MagicType.FIRE.name();
     }
 
-    public int costMagicPoint() {
-        return 2;
+    public MagicPoint costMagicPoint() {
+        final int value = 2;
+        return new MagicPoint(value);
     }
 
-    public int attackPower() {
-        return 20 + (int)(member.level * 0.5);
+    public AttackPower attackPower() {
+        final int value = 20 + (int)(member.level * 0.5);
+        return new AttackPower(value);
     }
 
-    public int costTechnicalPoint() {
-        return 0;
+    public TechnicalPoint costTechnicalPoint() {
+        final int value = 0;
+        return new TechnicalPoint(value);
     }
 }

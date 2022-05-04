@@ -11,15 +11,18 @@ public class Shiden implements Magic {
         return MagicType.SHIDEN.name();
     }
 
-    public int costMagicPoint() {
-        return 5 + (int)(member.level * 0.2);
-    }
-    
-    public int attackPower() {
-        return 50 + (int)(member.agility * 1.5);
+    public MagicPoint costMagicPoint() {
+        final int value = 5 + (int)(member.level * 0.2);
+        return new MagicPoint(value);
     }
 
-    public int costTechnicalPoint() {
-        return 5;
+    public AttackPower attackPower() {
+        final int value = 50 + (int)(member.agility * 1.5);
+        return new AttackPower(value);
+    }
+
+    public TechnicalPoint costTechnicalPoint() {
+        final int value = 5;
+        return new TechnicalPoint(value);
     }
 }
