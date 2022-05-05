@@ -1,6 +1,5 @@
 package Ch7.PrisonKey;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,11 +12,11 @@ public class Items {
 
     public static Items withPrisonKey() {
         final Item prisonKey = Item.newPrisonKey();
-        final List<Item> items = Arrays.asList(prisonKey);
+        final List<Item> items = List.of(prisonKey);
         return new Items(items);
     }
 
     boolean hasPrisonKey() {
-        return items.stream().anyMatch(item -> item.name.equals("prison key"));
+        return items.stream().anyMatch(item -> item.name.equals(Attribute.PRISON_KEY));
     }
 }
