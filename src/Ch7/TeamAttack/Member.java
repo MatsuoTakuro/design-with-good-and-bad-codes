@@ -7,7 +7,8 @@ public class Member {
     return true;
   }
 
-  public int attack() {
-    return new Random().nextInt(20, 50);
+  public Damage attack() {
+    final int amount =  new Random().nextInt(20, 50);
+    return new Damage(amount);
   }
 }

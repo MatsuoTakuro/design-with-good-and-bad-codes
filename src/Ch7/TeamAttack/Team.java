@@ -1,6 +1,5 @@
 package Ch7.TeamAttack;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Team {
@@ -10,18 +9,18 @@ public class Team {
         this.team = team;
     }
 
-    public int attack() {
-        int totalDamage = 0;
+    public Damage attack() {
+        int totalAmount = 0;
         for (Member member : team) {
             if (!member.hasTeamAttackSucceeded()) break;
 
-            int damage = (int) (member.attack() * 1.1);
+            final Damage damage  = new Damage((int) (member.attack().amount * 1.1));
 
-            if (damage < 30) break;
+            if (damage.amount < 30) break;
 
-            totalDamage += damage;
+            totalAmount += damage.amount;
         }
-        return totalDamage;
+        return new Damage(totalAmount);
     }
 
 }
