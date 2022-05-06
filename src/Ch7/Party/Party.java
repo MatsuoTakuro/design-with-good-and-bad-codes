@@ -1,6 +1,7 @@
 package Ch7.Party;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Party {
@@ -42,5 +43,9 @@ public class Party {
 
     int size() {
         return members.size();
+    }
+
+    List<Member> members() {
+        return Collections.unmodifiableList(members);
     }
 }

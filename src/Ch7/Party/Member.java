@@ -10,4 +10,9 @@ public class Member {
   public boolean isAlive() {
     return true;
   }
+
+  @Override
+  public String toString() {
+    return String.valueOf(id);
+  }
 }

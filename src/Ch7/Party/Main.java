@@ -1,5 +1,7 @@
 package Ch7.Party;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Member member1 = new Member(1);
@@ -15,5 +17,8 @@ public class Main {
 
         System.out.println(addedParty4.size());
         System.out.println(addedParty4.isAllAlive());
+
+        List<Member> members = addedParty4.members();
+        System.out.println(members);
     }
 }
