@@ -20,7 +20,6 @@ public class Main {
         game();
         discount();
         magic();
-        equipment();
 
     }
 
@@ -59,14 +58,5 @@ public class Main {
         System.out.println(magPoint.currentAmount);
         magPoint.consume(50);
         System.out.println(magPoint.currentAmount);
-    }
-
-    static void equipment() {
-        Equipment armorX = Equipment.newArmor(100, 200);
-//      Equipment headX = Equipment.newHead(100, 200);
-        Equipments currentEquips = Equipments.newEquipments();
-//      currentEquips.equipArmor(headX);
-        currentEquips.equipArmor(armorX);
-        currentEquips.deactivateAll();
     }
 }

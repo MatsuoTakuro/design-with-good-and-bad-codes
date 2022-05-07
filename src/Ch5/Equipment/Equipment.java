@@ -1,34 +1,36 @@
 package Ch5.Equipment;
 
 public class Equipment {
-    static final Equipment Empty = new Equipment();
-    private EquipmentType type;
-    private int attackPower;
-    private int defencePower;
+    private static final Equipment EMPTY = new Equipment("No Equipment", EquipmentType.NONE, 0, 0);
+    private final String name;
+    private final EquipmentType type;
+    private final int attackPower;
+    private final int defencePower;
 
-    private Equipment() {}
-
-    private Equipment(final EquipmentType type, final int attackPower, final int defencePower) {
+    private Equipment(final String name, final EquipmentType type, final int attackPower, final int defencePower) {
+        if (name.isEmpty()) throw new IllegalArgumentException();
+        this.name = name;
         this.type = type;
-        if (attackPower < 0) { throw new IllegalArgumentException(); }
+        if (attackPower < 0) throw new IllegalArgumentException();
         this.attackPower = attackPower;
-        if (defencePower < 0) { throw new IllegalArgumentException(); }
+        if (defencePower < 0) throw new IllegalArgumentException();
         this.defencePower = defencePower;
     }
 
-    public static Equipment newHead(final int attackPower, final int defencePower) {
-        return new Equipment(EquipmentType.HEAD, attackPower, defencePower);
+    public static  Equipment newArmor(final String name, final int attackPower, final int defencePower) {
+        return new Equipment(name, EquipmentType.ARMOR, attackPower, defencePower);
     }
 
-    public static  Equipment newArmor(final int attackPower, final int defencePower) {
-        return new Equipment(EquipmentType.ARMOR, attackPower, defencePower);
+    boolean isSameType(EquipmentType type) {
+        return this.type.equals(type);
     }
 
-    public static  Equipment newArm(final int attackPower, final int defencePower) {
-        return new Equipment(EquipmentType.ARM, attackPower, defencePower);
+    static Equipment empty() {
+        return EMPTY;
     }
 
-    public EquipmentType type() {
-        return type;
+    @Override
+    public String toString() {
+        return name + ", " + type + ", " + attackPower + ", " + defencePower;
     }
 }
