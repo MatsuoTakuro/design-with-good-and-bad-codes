@@ -3,8 +3,6 @@ package Ch5;
 import Ch5.Discount.DiscountRate;
 import Ch5.Discount.DiscountedPrice;
 import Ch5.Discount.RegularPrice;
-import Ch5.Equipment.Equipment;
-import Ch5.Equipment.Equipments;
 import Ch5.Game.Location;
 import Ch5.Magic.MagicPoint;
 import Ch5.Point.GiftPoint;

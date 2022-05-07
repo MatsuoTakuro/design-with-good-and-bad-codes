@@ -1,4 +1,4 @@
-package Ch5.Equipment;
+package Ch5.EquipmentWithCh9NonNull;
 
 public class Equipments {
     final private boolean canChangeAnyEquipment = true;

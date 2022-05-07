@@ -1,4 +1,4 @@
-package Ch5.Equipment;
+package Ch5.EquipmentWithCh9NonNull;
 
 public class Equipment {
     private static final Equipment EMPTY = new Equipment("No Equipment", EquipmentType.NONE, 0, 0);
